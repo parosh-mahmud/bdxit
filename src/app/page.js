@@ -1,103 +1,196 @@
+import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="space-y-12">
+      {/* Hero Banner */}
+      <section className="bg-yellow-300 text-center py-6">
+        <h1 className="text-xl font-bold">
+          ১ লক্ষ ৫০ হাজারের বেশি প্রিমিয়াম রীল বান্ডেল
+        </h1>
+        <Link
+          href="/cart"
+          className="mt-4 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
+        >
+          🛒 অর্ডার করতে চাই
+        </Link>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Special Offer Bar */}
+      <section className="bg-black text-white text-center py-4">
+        <p className="text-lg">
+          আজকের জন্য বিশেষ অফার ২০০০ টাকার বান্ডেল মাত্র ১৯৯ টাকা! সাথে থাকছে
+          %২৫ ডিস্কাউন্ট!!
+        </p>
+      </section>
+
+      {/* Video Embed */}
+      <section className="text-center py-8">
+        <div className="max-w-3xl mx-auto">
+          <iframe
+            className="w-full aspect-video rounded"
+            src="https://www.youtube.com/embed/RAD_VIDEO_ID"
+            title="Radiant Reel Bundle"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      {/* CTA Section */}
+      <section className="text-center py-4">
+        <h2 className="text-2xl font-bold">
+          আপনার স্বপ্নের পেইজ এবার মনিটাইজ করবেন!
+        </h2>
+        <Link
+          href="/cart"
+          className="mt-4 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          🛒 অর্ডার করতে চাই
+        </Link>
+      </section>
+
+      {/* Features Bundle */}
+      <section className="bg-green-100 text-center py-8">
+        <h3 className="text-xl font-semibold">এই বান্ডেলে যা যা পাবেন!</h3>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="border border-dashed p-4 rounded">
+            <p>১ লক্ষ ৫০ হাজারের প্রিমিয়াম রীল ভিডিও</p>
+          </div>
+          <div className="border border-dashed p-4 rounded">
+            <p>৩৮+ ক্যাটাগরির ভিডিও</p>
+          </div>
+          <div className="border border-dashed p-4 rounded">
+            <p>১০০০০+ সব ক্যাটাগরির ভিডিও লাইসেন্সসহ</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Carousel */}
+      <section className="py-8">
+        <h3 className="text-center text-lg font-semibold border border-blue-300 py-2 mb-6">
+          ৩৮+ ক্যাটাগরির মধ্যে কিছু ভিডিও ডেমো দেখুন!
+        </h3>
+        <div className="flex overflow-x-auto space-x-4 px-4">
+          {["Islamic Reel", "Space", "Nature", "AI", "Art & Craft"].map(
+            (cat, idx) => (
+              <div key={idx} className="min-w-[200px]">
+                <video
+                  src={`/videos/${cat.toLowerCase().replace(/ & /g, "-")}.mp4`}
+                  controls
+                  className="rounded-lg w-full h-auto"
+                ></video>
+                <p className="text-center mt-2">{cat}</p>
+              </div>
+            )
+          )}
+        </div>
+      </section>
+
+      {/* Repeat CTA */}
+      <section className="text-center py-8">
+        <Link
+          href="/cart"
+          className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          🛒 অর্ডার করতে চাই
+        </Link>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-white py-8">
+        <div className="max-w-xl mx-auto">
+          <h3 className="text-lg font-semibold mb-4">
+            অবশ্যই জেনে নিন সাধারণ প্রশ্নের উত্তর (FAQ)
+          </h3>
+          <div className="space-y-2">
+            {[
+              "কিভাবে পেমেন্ট করতে হবে?",
+              "ভিডিওগুলি কি ডাউনলোড করা যাবে?",
+              "লাইসেন্স কি কি সুবিধা দিবে?",
+              "আপনার কোন প্রশ্ন থাকলে?",
+              "ডাউনলোড ফাইল কিভাবে খোলা যাবে?",
+            ].map((faq, idx) => (
+              <details key={idx} className="border rounded-lg p-4">
+                <summary className="cursor-pointer">{faq}</summary>
+                <p className="mt-2 text-gray-600">
+                  এই প্রশ্নের উত্তর এখানে লিখুন।
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial / Review */}
+      <section className="text-center py-8">
+        <blockquote className="max-w-md mx-auto italic">
+          "মহাবিলস ইনসাইটস!"
+        </blockquote>
+        <p className="mt-2">"আপনার ব্যবসা দ্রুত বৃদ্ধি করবে।"</p>
+      </section>
+
+      {/* Warning Banner */}
+      <section className="bg-yellow-200 text-center py-6">
+        <p className="font-semibold px-4">
+          কেন আমাদের রীল ভিডিওগুলো কপি করা হবে না?
+        </p>
+      </section>
+
+      {/* Final CTA and Billing Upload */}
+      <section className="text-center py-8">
+        <h3 className="text-lg font-semibold">
+          বিল আপলোড করে আপনি হতে পারবেন সফল কন্টেন্ট ক্রিয়েটর!
+        </h3>
+        <p className="mt-2">মূল্য: ২০০০ টাকার বান্ডেল ১৯৯ টাকা!</p>
+        <Link
+          href="/checkout"
+          className="mt-4 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          বিল আপলোড করতে চাই
+        </Link>
+      </section>
+
+      {/* Billing Form */}
+      <section className="bg-white py-8">
+        <div className="max-w-md mx-auto bg-white p-6 shadow rounded">
+          <h4 className="font-semibold mb-4">
+            পরবর্তীতে পেয়ে ডাউনলোড লিংক পাবেন, লিংক ক্লিক করে ডাউনলোড করুন!
+          </h4>
+          <form className="space-y-4">
+            <div>
+              <label className="block text-sm">আপনার নাম *</label>
+              <input type="text" className="w-full border rounded p-2" />
+            </div>
+            <div>
+              <label className="block text-sm">আপনার ফোন নম্বর *</label>
+              <input type="text" className="w-full border rounded p-2" />
+            </div>
+            <div>
+              <label className="block text-sm">ইমেইল (ইচ্ছা অনুযায়ী)</label>
+              <input type="email" className="w-full border rounded p-2" />
+            </div>
+            <div className="border-t pt-4">
+              <div className="flex justify-between">
+                <span>Premium Reel Bundle × 1</span>
+                <span>৳199.00</span>
+              </div>
+              <div className="flex justify-between mt-2 font-bold">
+                <span>Total</span>
+                <span>৳199.00</span>
+              </div>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
+            >
+              PLACE ORDER ৳199.00
+            </button>
+          </form>
+        </div>
+      </section>
     </div>
   );
 }
