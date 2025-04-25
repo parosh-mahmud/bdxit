@@ -127,9 +127,9 @@ export default function HomePage() {
       {/* Testimonial / Review */}
       <section className="text-center py-8">
         <blockquote className="max-w-md mx-auto italic">
-          "মহাবিলস ইনসাইটস!"
+          &quot;মহাবিলস ইনসাইটস!&quot;
         </blockquote>
-        <p className="mt-2">"আপনার ব্যবসা দ্রুত বৃদ্ধি করবে।"</p>
+        <p className="mt-2">&quot;আপনার ব্যবসা দ্রুত বৃদ্ধি করবে।&quot;</p>
       </section>
 
       {/* Warning Banner */}
