@@ -30,18 +30,48 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Video Embed */}
-      <section className="text-center py-12 px-4">
+      {/* Video Embed - Reel Bundle Demo */}
+      <section className="text-center  px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
           আমাদের রীল বান্ডেলের একটি ঝলক দেখুন
         </h2>
-        <div className="max-w-4xl mx-auto shadow-xl rounded-lg overflow-hidden">
+        {/* <div className="max-w-4xl mx-auto shadow-xl rounded-lg overflow-hidden">
           <iframe
             className="w-full aspect-video"
-            src="https://www.youtube.com/embed/RAD_VIDEO_ID" // Replace with actual YouTube embed URL
+            src="https://www.youtube.com/shorts/-cHu9Q_ZsyY?feature=share" // Original Demo Video URL
             title="Radiant Reel Bundle Demo"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div> */}
+      </section>
+
+      {/* --- NEW Video Embed Section - Purple Trees Video --- */}
+      <section className="text-center py-12 px-4 bg-gray-50">
+        {" "}
+        {/* Added a light background for separation */}
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
+          Relaxing Nature Scene {/* You can change this heading */}
+        </h2>
+        {/* Adjusted max-width and centering similar to the other video */}
+        <div className="max-w-xl mx-auto shadow-xl rounded-lg overflow-hidden">
+          {" "}
+          {/* Adjusted max-width for a potentially vertical video */}
+          <iframe
+            // --- Using aspect-video might not be ideal for a potentially vertical video ---
+            // --- Consider fixed height or different aspect ratio if needed ---
+            // className="w-full aspect-video"
+
+            // --- Alternative: Fixed height/width (adjust as needed) ---
+            width="100%" // Take full width of the container
+            height="560" // Height matching your raw iframe example
+            style={{ maxWidth: "315px", margin: "0 auto", display: "block" }} // Optional: Constrain width further
+            src="https://www.youtube.com/embed/-cHu9Q_ZsyY" // Purple Trees Video URL
+            title="Relaxing Walk Under Stunning Purple Blooming Trees | Beautiful Nature Scenery"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin" // Added from your raw iframe
             allowFullScreen
           ></iframe>
         </div>
@@ -104,27 +134,44 @@ export default function HomePage() {
         <h3 className="text-center text-2xl md:text-3xl font-bold border-b-4 border-blue-500 pb-4 mb-8 text-gray-800">
           ৩৮+ ক্যাটাগরির কিছু ভিডিও ডেমো দেখুন!
         </h3>
-        <div className="flex overflow-x-auto space-x-6 px-4 pb-4">
+        <div className="flex overflow-x-auto space-x-6 px-4 pb-4 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200">
+          {" "}
+          {/* Added scrollbar styling */}
           {[
-            { name: "Islamic Reel", src: "/videos/islamic-reel.mp4" },
+            { name: "Islamic Reel", src: "/videos/islamic-reel.mp4" }, // Original data still used for names
             { name: "Space", src: "/videos/space.mp4" },
             { name: "Nature", src: "/videos/nature.mp4" },
             { name: "AI", src: "/videos/ai.mp4" },
             { name: "Art & Craft", src: "/videos/art-craft.mp4" },
-            { name: "Travel", src: "/videos/travel.mp4" }, // Added more for demo variety
+            { name: "Travel", src: "/videos/travel.mp4" },
             { name: "Food", src: "/videos/food.mp4" },
           ].map((video, idx) => (
             <div
               key={idx}
-              className="min-w-[220px] md:min-w-[250px] rounded-lg shadow-lg overflow-hidden bg-white"
+              // Adjusted min-width slightly and added flex for layout
+              className="min-w-[200px] md:min-w-[220px] w-[200px] md:w-[220px] rounded-lg shadow-lg overflow-hidden bg-white flex flex-col"
             >
-              <video
-                src={video.src}
-                controls
-                className="w-full h-auto object-cover"
-              ></video>
-              <p className="text-center mt-3 mb-2 text-lg font-medium text-gray-700">
-                {video.name}
+              {/* --- Replaced <video> with <iframe> --- */}
+              {/* Container div to enforce aspect ratio (9:16 for vertical video) */}
+              <div className="w-full aspect-[9/16] bg-black">
+                {" "}
+                {/* Added bg-black for loading state */}
+                <iframe
+                  className="w-full h-full" // Iframe fills the aspect ratio container
+                  src="https://www.youtube.com/embed/-cHu9Q_ZsyY" // Using the SAME video URL for all demos
+                  title="Relaxing Walk Under Stunning Purple Blooming Trees | Beautiful Nature Scenery" // Using the SAME title
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              {/* Title pushed to bottom */}
+              <p className="text-center py-2 px-1 mt-auto text-md font-medium text-gray-700">
+                {" "}
+                {/* Adjusted padding/size */}
+                {video.name}{" "}
+                {/* Still using the original name from the array */}
               </p>
             </div>
           ))}
