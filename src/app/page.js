@@ -221,7 +221,7 @@ export default function HomePage() {
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                আপনার পুরো নাম *
+                আপনার পুরো নাম {"*"} {/* Fixed */}
               </label>
               <input
                 type="text"
@@ -235,7 +235,7 @@ export default function HomePage() {
                 htmlFor="phone"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                আপনার সক্রিয় ফোন নম্বর *
+                আপনার সক্রিয় ফোন নম্বর {"*"} {/* Fixed */}
               </label>
               <input
                 type="text"
