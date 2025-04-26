@@ -186,9 +186,9 @@ export default function HomePage() {
 
       {/* Testimonial / Review */}
       <section className="text-center py-12 px-4 bg-blue-50">
-        <blockquote className="max-w-xl mx-auto italic text-xl md:text-2xl text-gray-700 leading-relaxed">
-          "এই রীল বান্ডেলটি আমার ফেসবুক পেজের রিচ অবিশ্বাস্যভাবে বাড়িয়ে
-          দিয়েছে! অসাধারণ কালেকশন এবং ব্যবহারের সুবিধা সত্যিই মুগ্ধ করার মতো।"
+        <blockquote className="…">
+          এই রীল বান্ডেলটি আমার ফেসবুক পেজের রিচ অবিশ্বাস্যভাবে বাড়িয়ে দিয়েছে!
+          অসাধারণ কালেকশন এবং ব্যবহারের সুবিধা সত্যিই মুগ্ধ করার মতো।{" "}
         </blockquote>
         <p className="mt-6 text-lg font-semibold text-gray-800">
           - একজন সন্তুষ্ট কন্টেন্ট ক্রিয়েটর
